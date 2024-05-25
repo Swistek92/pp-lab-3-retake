@@ -33,25 +33,45 @@ public class Main {
         // Wyświetl informacje o wszystkich pacjentach w Hospital
         hospital.displayPatients();
 
-        // Usuń pielęgniarza/pielęgniarkę z Hospital
-        hospital.removeStaff(nurse);
+        // Stwórz dwie nowe instancje obiektu Patient
+        Patient patient1 = new Patient("Leonard", "Cohen", 60, "Flu", 105);
+        Patient patient2 = new Patient("Rachel", "Green", 32, "Broken Arm", 106);
 
-        // Usuń ostatniego pacjenta z Hospital
-        hospital.removePatient(mrRobot);
+        // Dodaj nowe instancje pacjentów do Hospital
+        hospital.addPatient(patient1);
+        hospital.addPatient(patient2);
+
+        // Stwórz nową instancję obiektu Doctor
+        Doctor doctor2 = new Doctor("Meredith", "Grey", 39, "Surgery");
+
+        // Stwórz trzy nowe instancje obiektu Nurse
+        Nurse nurse2 = new Nurse("Alex", "Karev", 30, "Pediatrics");
+        Nurse nurse3 = new Nurse("Cristina", "Yang", 35, "Cardiology");
+        Nurse nurse4 = new Nurse("Izzie", "Stevens", 29, "Oncology");
+
+        // Dodaj nowe instancje doktora i pielęgniarek do Hospital
+        hospital.addStaff(doctor2);
+        hospital.addStaff(nurse2);
+        hospital.addStaff(nurse3);
+        hospital.addStaff(nurse4);
+
+        // Usuń jednego pacjenta oraz jednego pielęgniarza/pielęgniarkę
+        hospital.removePatient(elliot);
+        hospital.removeStaff(nurse);
 
         // Wyświetl ponownie informacje o patients i staff obiektu Hospital
         hospital.displayStaff();
         hospital.displayPatients();
 
         // Ustaw nowe wartości dla illness, roomNumber oraz specialization
-        elliot.setIllness("Paranoia");
-        elliot.setRoomNumber(105);
+        angela.setIllness("Paranoia");
+        angela.setRoomNumber(107);
 
         krista.setSpecialization("Clinical Psychology");
 
         // Wyświetl nowe informacje
         System.out.println("Updated Patient Info:");
-        elliot.displayInfo();
+        angela.displayInfo();
         System.out.println();
 
         System.out.println("Updated Doctor Info:");
