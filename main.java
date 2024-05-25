@@ -1,4 +1,5 @@
 import medicine.Patient;
+import medicine.Doctor;
 
 public class Main {
     public static void main(String[] args) {
@@ -28,5 +29,13 @@ public class Main {
         System.out.println("Name: " + elliot.getFirstName() + " " + elliot.getLastName());
         System.out.println("Illness: " + elliot.getIllness());
         System.out.println("Room number: " + elliot.getRoomNumber());
+
+        Doctor krista = new Doctor("Krista", "Gordon", 40, "Psychiatry");
+        krista.displayInfo();
+        krista.performDuty();
+        System.out.println("Specialization: " + krista.getSpecialization());
+
+        krista.setSpecialization("Clinical Psychology");
+        System.out.println("Updated Specialization: " + krista.getSpecialization());
     }
 }
